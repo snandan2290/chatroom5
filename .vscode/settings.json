@@ -1,0 +1,21 @@
+{
+  "spellright.language": [
+    "en"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext",
+    "html",
+    "Log",
+    "erb"
+  ],
+  "spellright.parserByClass": {
+    "Log": {
+      "parser": "code"
+    }
+  },
+  "cSpell.enableFiletypes": [
+    "erb"
+  ]
+}

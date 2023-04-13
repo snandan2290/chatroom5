@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -61,3 +61,6 @@ gem 'semantic-ui-sass'
 
 # Gem for Javascript required for semantic-ui gem
 gem 'jquery-rails'
+
+# Gem for Tabular view of models data in rials console window
+gem 'hirb'
