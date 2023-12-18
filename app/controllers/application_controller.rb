@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def required_user
+    Rails.logger.debug("Coming to required_user/#{logged_in?}")
     unless logged_in?
       flash[:error] = "User needs to login to continue operation!!"
       redirect_to login_path

@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+  before_action :logged_in_required, only: [:new, :create, :login]
+
 
   def login
     @user = User.new
@@ -31,11 +33,19 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:users_id] = nil
+    session[:user_id] = nil
     flash[:notice] = "You have logged out successfully!!"
     redirect_to login_path
   end
 
+  private
+  def logged_in_required
+    if logged_in?
+      flash[:notice] = 'You are already logged in!!'
+      redirect_to root_path
+    end
+  end
+  
 
 
 end
