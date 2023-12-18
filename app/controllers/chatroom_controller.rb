@@ -8,6 +8,7 @@ class ChatroomController < ApplicationController
 
   private 
   def get_messages
+    redirect_to login_path unless logged_in?
     return @messages if @messages
     if !@messages
       @messages = Message.all

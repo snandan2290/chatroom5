@@ -57,7 +57,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # semnatic-ui gem - front end gem
-gem 'semantic-ui-sass'
+gem 'semantic-ui-sass'  
 
 # Gem for Javascript required for semantic-ui gem
 gem 'jquery-rails'

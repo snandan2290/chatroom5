@@ -1,10 +1,10 @@
   <div class=" ui container">
     <% flash.each do |name,msg|%>
-      <div class="ui message <%= name == "notice" ? "success" : "negative" %>">
+      <div class="ui message <%= name == "notice" ? "success" : "error" %>">
         <i class="close icon"></i>
           <div class="header">
             <%= msg %>
-          </div>          
+          </div>              
       </div>
     <% end %>
   </div>
