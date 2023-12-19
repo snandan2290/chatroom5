@@ -20,6 +20,22 @@
 
 //= require_tree .
 
+scroll_bottom = function (){
+    if ($('#messages').length >0 ) {
+      $('#messages').scrollTop($('#messages')[0].scrollHeight)
+    }
+}
+
+submit_message = function(){
+  $('#message_message_body').on('keydown', function(e) {
+    if (13 == e.keyCode){
+      $('button').click();
+      e.target.value = "";
+    }
+  });
+};
+
+
 
 $(document).on('turbolinks:load', function() {
   $('.ui.dropdown').dropdown();
@@ -31,5 +47,6 @@ $(document).on('turbolinks:load', function() {
       .transition('fade')
     ;
   });
-  
+  submit_message();
+  scroll_bottom();
 })

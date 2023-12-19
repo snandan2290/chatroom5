@@ -11,7 +11,7 @@ class ChatroomController < ApplicationController
   def get_messages
     return @messages if @messages
     if !@messages
-      @messages = Message.all
+      @messages = Message.custom_display
     end
   end
 
